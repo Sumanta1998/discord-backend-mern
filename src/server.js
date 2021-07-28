@@ -4,7 +4,9 @@ import mongoose from 'mongoose';
 import Pusher from 'pusher';
 
 import mongoData from './mongoData.js';
-const port = 3000;
+const DB_HOST = process.env.DB_HOST;
+
+const port = DB_HOST || 3000;
 
 const pusher = new Pusher({
 	appId: '1240061',
